@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đăng nhập</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f0f2f5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                width: 380px;
+                transition: all 0.3s ease-in-out;
+            }
+            .container:hover {
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+            h2 {
+                color: #333;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            label {
+                display: block;
+                margin-bottom: 8px;
+                color: #555;
+                font-weight: 600;
+            }
+            input[type="text"], input[type="password"] {
+                width: calc(100% - 20px);
+                padding: 12px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 16px;
+                transition: border-color 0.2s ease-in-out;
+            }
+            input[type="text"]:focus, input[type="password"]:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+            input[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                background-color: #007bff;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>ĐĂNG NHẬP</h2>
+            <form action="LoginUserServlet" method="post">
+                <label for="email">Email:</label>
+                <input type="text" name="email" placeholder="Email" required>
+                
+                <label for="password">Mật khẩu:</label>
+                <input type="password" name="password" placeholder="Mật khẩu" required>
+                
+                <input type="submit" value="Đăng nhập">
+            </form>
+        </div>
+    </body>
+</html>
